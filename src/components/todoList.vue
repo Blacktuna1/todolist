@@ -12,7 +12,7 @@
           :id="item.id"
           v-model="item.isCompleted"
         >
-        <label class="form-check-label" :for="item.id">
+        <label class="form-check-label" :for="item.id" :class="item.isCompleted ? 'delete':''">
           {{item.task}}
         </label>
       </div>
@@ -39,5 +39,11 @@ export default {
 </script>
 
 <style>
-
+.list-group{
+  /* width: 30%;
+  margin: 0 auto; */
+}
+.delete{
+  text-decoration: line-through;
+}
 </style>
